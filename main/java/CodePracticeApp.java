@@ -1,3 +1,6 @@
+import javaCollections.ArrayListUtils;
+import javaCollections.CollectionsApp;
+
 import java.util.*;
 
 public class CodePracticeApp
@@ -5,7 +8,7 @@ public class CodePracticeApp
     public static void main(String[] args)
     {
         System.out.println("\n");
-        GradeBookWithHashMap.runGradeBook();
+        CollectionsApp.runMain();
     }
 
     public static void ATM_Sum() {

@@ -1,12 +1,19 @@
+package javaCollections;
 import java.util.HashMap;
-import java.util.Map;
 
 public class HashMapUtils
 {
-    HashMap<Integer, String> map = new HashMap();
+    private int key = 100;
+    private HashMap<Integer, String> map = new HashMap();
 
-    public static void useHashMap()
+    public void addWord(String word)
     {
+        map.put(key, word);
+        key += 3;
+    }
 
+    public HashMap<Integer, String> getMap()
+    {
+        return map;
     }
 }
