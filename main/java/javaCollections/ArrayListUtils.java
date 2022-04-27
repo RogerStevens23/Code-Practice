@@ -15,15 +15,6 @@ public class ArrayListUtils
     {
         words.add(word);
     }
-    public String getAllWordsAsString()
-    {
-        StringBuilder result = new StringBuilder();
-        for (String word : words)
-        {
-            result.append(" ").append(word);
-        }
-        return result.toString().trim();
-    }
     public String getAllPluralsWithCaps()
     {
         StringBuilder result = new StringBuilder();
