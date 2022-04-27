@@ -1,6 +1,6 @@
-import javaCollections.ArrayListUtils;
+import AnimalHierarchy.Animal_A;
+import AnimalHierarchy.Bird;
 import javaCollections.CollectionsApp;
-
 import java.util.*;
 
 public class CodePracticeApp
@@ -8,7 +8,10 @@ public class CodePracticeApp
     public static void main(String[] args)
     {
         System.out.println("\n");
-        CollectionsApp.runMain();
+        Animal_A myBird = new Bird();
+        myBird.label();
+        myBird.move();
+        myBird.eat();
     }
 
     public static void ATM_Sum() {
@@ -36,7 +39,6 @@ public class CodePracticeApp
         sum.calculateSum();
         System.out.println("The sum of the numbers is: " + sum.sum);
     }
-
     public static int getPositiveInt() {
         boolean isPos = false;
         Scanner input = new Scanner(System.in);
@@ -48,17 +50,14 @@ public class CodePracticeApp
         }
         return result;
     }
-
     public static double getDouble() {
         Scanner input = new Scanner(System.in);
         return input.nextDouble();
     }
-
     public static String getString() {
         Scanner input = new Scanner(System.in);
         return input.nextLine();
     }
-
     public static boolean isPrimeNumber(int posNum) {
         boolean flag = true;
         for (int i = 2; i < posNum; i++) {
@@ -72,7 +71,6 @@ public class CodePracticeApp
         else
             return false;
     }
-
     public static int highestCommonFactor(int firstInt, int secondInt) {
         int dividend = 0, divisor = 0, remainder = 1;
 
@@ -94,7 +92,6 @@ public class CodePracticeApp
         }
         return divisor;
     }
-
     public static void addingLoop() {
         String response;
         do {
@@ -112,7 +109,6 @@ public class CodePracticeApp
         }
         while (response != "N");
     }
-
     public static void stringPractice() {
         String cityName = "Cleveland";
         System.out.println("Length: " + cityName.length());
