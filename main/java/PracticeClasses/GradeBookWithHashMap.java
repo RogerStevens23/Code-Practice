@@ -1,5 +1,8 @@
+package PracticeClasses;
+
 import java.util.HashMap;
 import java.util.Map;
+import static InputUtils.Input.*;
 
 public class GradeBookWithHashMap
 {
@@ -14,15 +17,14 @@ public class GradeBookWithHashMap
         do
         {
             System.out.println("Student: ");
-            newStudent = CodePracticeApp.getString();
+            newStudent = getString();
 
             if(!newStudent.equals(""))
             {
                 System.out.println("Grade: ");
-                double newGrade = CodePracticeApp.getDouble();
+                double newGrade = getDouble();
                 students.put(newStudent, newGrade); // Put is similar to add for Lists.
-
-                CodePracticeApp.getString();
+                getString();
             }
         }
         while(!newStudent.equals(""));

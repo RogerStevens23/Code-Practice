@@ -1,3 +1,5 @@
+package PracticeClasses;
+
 public class GetFactorial {
     public static String getFactorial(int userNum) {
         int sum = userNum;

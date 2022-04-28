@@ -1,3 +1,5 @@
+package PracticeClasses;
+
 import java.util.Scanner;
 
 public class PrintTable {

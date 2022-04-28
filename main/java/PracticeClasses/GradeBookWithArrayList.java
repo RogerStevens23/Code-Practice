@@ -1,4 +1,6 @@
+package PracticeClasses;
 import java.util.ArrayList;
+import static InputUtils.Input.*;
 
 
 public class GradeBookWithArrayList
@@ -14,7 +16,7 @@ public class GradeBookWithArrayList
 
         do
         {
-            newStudent = CodePracticeApp.getString();
+            newStudent = getString();
 
             if(!newStudent.equals(""))
             {
@@ -26,7 +28,7 @@ public class GradeBookWithArrayList
         for (String student : students)
         {
             System.out.println("Grade for " + student + ": ");
-            grades.add(CodePracticeApp.getDouble());
+            grades.add(getDouble());
         }
 
         System.out.println("\nClass roster:");

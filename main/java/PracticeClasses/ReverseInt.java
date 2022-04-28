@@ -1,3 +1,5 @@
+package PracticeClasses;
+
 public class ReverseInt {
     public static int reverseInt(int userNum) {
         String userNumString = String.valueOf(userNum), result = "";

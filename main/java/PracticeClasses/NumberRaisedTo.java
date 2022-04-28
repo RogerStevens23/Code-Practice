@@ -1,3 +1,5 @@
+package PracticeClasses;
+
 public class NumberRaisedTo {
     public static int numberRaisedTo(int base, int power) {
         int sum = base;

@@ -1,4 +1,4 @@
-package Objects;
+package PracticeClasses;
 
 public class Parrot
 {

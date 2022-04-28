@@ -1,3 +1,5 @@
+package PracticeClasses;
+
 public class PrintNumbersTen {
     public static void printNum10For() {
         for (int i = 0; i < 11; i++) {

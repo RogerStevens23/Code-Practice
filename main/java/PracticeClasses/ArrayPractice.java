@@ -1,3 +1,6 @@
+package PracticeClasses;
+import static InputUtils.Input.*;
+
 public class ArrayPractice {
     public static void creatingArray() {
         // Remember, arrays are a fixed size.
@@ -31,7 +34,7 @@ public class ArrayPractice {
         System.out.println("Please enter three names of people you know...");
         String[] names = new String[3];
         for (int i = 0; i < names.length; i++) {
-            names[i] = CodePracticeApp.getString();
+            names[i] = getString();
         }
         for (int i = 0; i < names.length; i++) {
             System.out.println(names[i]);
@@ -42,7 +45,7 @@ public class ArrayPractice {
         System.out.println("Please enter five student GPAs...");
         double[] studentGPAs = new double[5];
         for (int i = 0; i < studentGPAs.length; i++) {
-            studentGPAs[i] = CodePracticeApp.getDouble();
+            studentGPAs[i] = getDouble();
         }
         for (int i = 0; i < studentGPAs.length; i++) {
             System.out.println(studentGPAs[i]);
@@ -85,16 +88,16 @@ public class ArrayPractice {
         System.out.println("Please enter four names:");
         String[] peers = new String[4];
         for (int i = 0; i < peers.length; i++)
-            peers[i] = CodePracticeApp.getString();
+            peers[i] = getString();
         for (int i = 0; i < peers.length; i++)
             System.out.println(peers[i].charAt(0));
     }
 
     public static void ifWordContainsLetter() {
         System.out.println("Please enter a word:");
-        String word = CodePracticeApp.getString();
+        String word = getString();
         System.out.println("Please enter a letter:");
-        char letter = CodePracticeApp.getString().charAt(0);
+        char letter = getString().charAt(0);
         if (word.contains("" + letter))
             System.out.println("Yep, its got one of those.");
         else
@@ -103,7 +106,7 @@ public class ArrayPractice {
 
     public static void stringSplitPrint() {
         System.out.println("Please enter a list of items, separated by a '-', no spaces:");
-        String listOfItems = CodePracticeApp.getString();
+        String listOfItems = getString();
 
         String[] itemArray = listOfItems.split("-");
         for (int i = 0; i < itemArray.length; i++) {
@@ -111,7 +114,7 @@ public class ArrayPractice {
         }
 
         System.out.println("Please enter a list of items, separated by a '-' or a '.', no spaces:");
-        listOfItems = CodePracticeApp.getString();
+        listOfItems = getString();
         // Using multiple delimiters for ".Split" method.
         itemArray = listOfItems.split("-|\\.");
         for (int i = 0; i < itemArray.length; i++) {

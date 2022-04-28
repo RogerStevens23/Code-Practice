@@ -1,8 +1,6 @@
 package javaCollections;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import static InputUtils.Input.*;
 
 public class CollectionsApp
 {
@@ -305,29 +303,7 @@ public class CollectionsApp
         }
     }
 
-    // Input Methods
-    public static int getPositiveInt()
-    {
-        boolean isPos = false;
-        Scanner input = new Scanner(System.in);
-        int result = 0;
-        while (!isPos) {
-            result = input.nextInt();
-            if (result >= 0)
-                isPos = true;
-        }
-        return result;
-    }
-    public static double getDouble()
-    {
-        Scanner input = new Scanner(System.in);
-        return input.nextDouble();
-    }
-    public static String getString()
-    {
-        Scanner input = new Scanner(System.in);
-        return input.nextLine();
-    }
+    // Pause Screen
     public static boolean pauseScreen()
     {
         System.out.println("Press enter to continue:");
