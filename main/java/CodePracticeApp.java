@@ -9,7 +9,7 @@ public class CodePracticeApp {
 
     public static void main(String[] args) {
         String str = "Hello";
-        System.out.println(front22("He"));
+        System.out.println(hasTeen(19, 13, 13));
     }
 
     public static boolean parrotTrouble(boolean talking, int hour) {
@@ -64,5 +64,28 @@ public class CodePracticeApp {
             return str.substring(0, 2) + str + str.substring(0, 2);
         else
             return str+str+str;
+    }
+
+    public static boolean startHi(String str) {
+        return str.startsWith("hi");
+    }
+
+    public static boolean icyHot(int temp1, int temp2) {
+        return(temp1 < 0 && temp2 > 100 || temp2 < 0 && temp1 > 100);
+    }
+
+    public static boolean in1020(int a, int b) {
+        return(a >= 10 && a <= 20 || b >= 10 && b <= 20);
+    }
+
+    public static boolean hasTeen(int a, int b, int c) {
+        return(a >= 13 && a <= 19 || b >= 13 && b <= 19 || c >= 13 && c <= 19);
+    }
+
+    public boolean loneTeen(int a, int b) {
+        return(inRange(a) && !inRange(b) || inRange(b) && !inRange(a));
+    }
+    public static boolean inRange(int n) {
+        return (n >= 13 && n <= 19);
     }
 }
