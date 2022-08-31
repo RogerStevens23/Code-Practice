@@ -8,8 +8,9 @@ import javaCollections.Maps.HashMapPractice;
 public class CodePracticeApp {
 
     public static void main(String[] args) {
-        String str = "Hello";
-        System.out.println(hasTeen(19, 13, 13));
+        String str = "adelbc";
+        //System.out.println(str.substring(1, 3));
+        System.out.println(delDel("adel"));
     }
 
     public static boolean parrotTrouble(boolean talking, int hour) {
@@ -82,10 +83,17 @@ public class CodePracticeApp {
         return(a >= 13 && a <= 19 || b >= 13 && b <= 19 || c >= 13 && c <= 19);
     }
 
-    public boolean loneTeen(int a, int b) {
+    public static boolean loneTeen(int a, int b) {
         return(inRange(a) && !inRange(b) || inRange(b) && !inRange(a));
     }
     public static boolean inRange(int n) {
         return (n >= 13 && n <= 19);
     }
+
+    public static String delDel(String str) {
+        if(str.length() >= 4 && str.substring(1, 4).equals("del"))
+            return str.charAt(0) + str.substring(4);
+        else return str;
+    }
+
 }

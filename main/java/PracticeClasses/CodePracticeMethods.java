@@ -134,7 +134,7 @@ public class CodePracticeMethods
     public static void QueueLinkedListTest()
     {
         int time = 30;
-        Queue<Integer> queue = new LinkedList<Integer>();
+        Queue<Integer> queue = new LinkedList<>();
         for(int i = time; i > 0; i--)
         {
             queue.add(i);
