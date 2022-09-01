@@ -173,6 +173,7 @@ public class Warmup1 {
         return(a % 10 == b % 10);
     }
 
+    // Only one not solved by myself.
     public static String endUp(String str) {
         if (str.length() <= 3) return str.toUpperCase();
         int cut = str.length() - 3;
@@ -182,5 +183,11 @@ public class Warmup1 {
         return front + back.toUpperCase();
     }
 
-
+    public static String everyNth(String str, int n) {
+        String result = "";
+        for(int i = 0; i < str.length() - 1; i++)
+            if(i == 0 || i % n == 0)
+                result += str.charAt(i);
+        return result;
+    }
 }
