@@ -9,8 +9,5 @@ public class Keyword
     public String getWord() {return word;}
 
     // Constructor
-    public Keyword(String word)
-    {
-        this.word = word;
-    }
+    public Keyword(String word) {this.word = word;}
 }
