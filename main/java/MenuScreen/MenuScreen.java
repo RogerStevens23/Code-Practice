@@ -12,8 +12,12 @@ public abstract class MenuScreen {
     private final Keyword[] keywords;
     private final String displayBars;
 
+    // Getters
+    public Keyword getScreenWord() {return screenWord;}
+    public Keyword[] getKeywords() {return keywords;}
+
     // Constructors
-    public MenuScreen(Keyword screenWord,Keyword... keywords) {
+    public MenuScreen(Keyword screenWord,Keyword...keywords) {
         this.screenWord = screenWord;
         this.keywords = keywords;
         this.displayBars = dynamicDisplayBars();
@@ -29,17 +33,26 @@ public abstract class MenuScreen {
         System.out.println(displayBars);
     }
 
-    //
-    public boolean isCorrectKeyword() {
+    // Keyword Check and Return
+    public boolean isCorrectKeyword(String wordEntered) {
         boolean isCorrectKeyword = false;
-        String input = getUserString();
         for(Keyword word : keywords) {
-            if (input.equalsIgnoreCase(word.getWord())) {
+            if (wordEntered.equalsIgnoreCase(word.getWord())) {
                 isCorrectKeyword = true;
                 break;
             }
         }
         return isCorrectKeyword;
+    }
+    public Keyword returnCorrectKeyword(String wordEntered) {
+        Keyword result = null;
+        for(Keyword word : keywords) {
+            if (wordEntered.equalsIgnoreCase(word.getWord())) {
+                result = word;
+                break;
+            }
+        }
+        return result;
     }
 
     // Display Logic
@@ -56,24 +69,6 @@ public abstract class MenuScreen {
                 prevSize = word.getWord().length();
         }
         return prevSize;
-    }
-
-
-    // User input Methods
-    public String getUserString() {
-        Scanner input = new Scanner(System.in);
-        return input.nextLine();
-    }
-    public int getUserInt() {
-        int result = -1;
-        Scanner input = new Scanner(System.in);
-        try {
-            result = input.nextInt();
-        }
-        catch (java.util.InputMismatchException exception) {
-            System.out.println("Incorrect Format!");
-        }
-        return result;
     }
 
     @Override
