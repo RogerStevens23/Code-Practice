@@ -68,5 +68,44 @@ public class Warmup2 {
         return result.toString();
     }
 
+    public static String stringSplosion(String str) {
+        StringBuilder result = new StringBuilder();
+        for(int i = 0; i < str.length(); i++)
+            result.append(str.substring(0, i));
+        return result.append(str).toString();
+    }
 
+    public static int last2(String str) {
+        int count = 0;
+        if(str.length() >= 2) {
+            String sub = str.substring(str.length()-2), temp = "";
+            for(int i = 0; i < str.length()-1; i++) {
+                temp = str.substring(i, i+2);
+                if(temp.equals(sub))
+                    count++;
+            }
+            return count - 1;
+        }
+        else return 0;
+    }
+
+    public static int arrayCount9(int[] nums) {
+        int count = 0;
+        for (int num : nums)
+            if (num == 9)
+                count++;
+        return count;
+    }
+
+    public static boolean arrayFront9(int[] nums) {
+        boolean result = false;
+        for(int i = 0; i < nums.length; i++)
+            if (i <= 3 && nums[i] == 9) {
+                result = true;
+                break;
+            }
+        return result;
+    }
+
+    
 }
