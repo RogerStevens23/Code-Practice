@@ -9,6 +9,8 @@ public abstract class MenuScreen {
 
     // Private Fields
     private final Keyword screenWord;
+    private final Keyword quit = new Keyword("Quit");
+    private final Keyword back = new Keyword("Back");
     private final Keyword[] keywords;
     private final String displayBars;
 
@@ -17,7 +19,7 @@ public abstract class MenuScreen {
     public Keyword[] getKeywords() {return keywords;}
 
     // Constructors
-    public MenuScreen(Keyword screenWord,Keyword...keywords) {
+    public MenuScreen(Keyword screenWord, Keyword...keywords) {
         this.screenWord = screenWord;
         this.keywords = keywords;
         this.displayBars = dynamicDisplayBars();
@@ -37,7 +39,8 @@ public abstract class MenuScreen {
     public boolean isCorrectKeyword(String wordEntered) {
         boolean isCorrectKeyword = false;
         for(Keyword word : keywords) {
-            if (wordEntered.equalsIgnoreCase(word.getWord())) {
+            if (wordEntered.equalsIgnoreCase(word.getWord()) || wordEntered.equalsIgnoreCase(quit.getWord())
+                    || wordEntered.equalsIgnoreCase(back.getWord())) {
                 isCorrectKeyword = true;
                 break;
             }
@@ -47,8 +50,16 @@ public abstract class MenuScreen {
     public Keyword returnCorrectKeyword(String wordEntered) {
         Keyword result = null;
         for(Keyword word : keywords) {
-            if (wordEntered.equalsIgnoreCase(word.getWord())) {
+            if(wordEntered.equalsIgnoreCase(word.getWord())) {
                 result = word;
+                break;
+            }
+            else if(wordEntered.equalsIgnoreCase(back.getWord())) {
+                result = back;
+                break;
+            }
+            else if(wordEntered.equalsIgnoreCase(quit.getWord())) {
+                result = quit;
                 break;
             }
         }
