@@ -20,12 +20,4 @@ public class CodePracticeApp {
         MenuScreenApp App = new MenuScreenApp(screens, 0);
         App.runScreen();
     }
-
-    /*public static String stringSplosion(String str) {
-        String result = "";
-        for(int i = 0; i < str.length()-1; i++) {
-
-        }
-        return result;
-    }*/
 }
