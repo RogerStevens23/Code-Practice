@@ -107,5 +107,5 @@ public class Warmup2 {
         return result;
     }
 
-    
+
 }
