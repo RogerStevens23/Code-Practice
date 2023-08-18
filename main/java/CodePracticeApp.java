@@ -15,14 +15,7 @@ public class CodePracticeApp {
 		// new Keyword("One")), new QuickScreen(new Keyword("Yoko")), }; MenuScreenApp
 		// App = new MenuScreenApp(screens, 0); App.runScreen();
 
-		//System.out.println(LeetCode75.mergeAlterately("abc", "pqr"));
-		//System.out.println("Result is : " + LeetCode75.gcdOfString("ABABAB", "ABAB"));
-		
-		/* System.out.println("Results are: ");
-		int[] t = Array1.makeLast(new int[]{1,2,3});
-		for(int n : t) {
-			System.out.println(n);
-		} */
-		System.out.println("Results are: "+Array1.double23(new int[]{3,3}));
+		System.out.println("Results are: ");
+		System.out.println(Array1.start1(new int[]{1,2,3,4}, new int[]{1}));
 	} 
 }
