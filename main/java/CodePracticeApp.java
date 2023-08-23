@@ -1,5 +1,5 @@
 import CodingBatPracticeClasses.Array1;
-import LeetCode.LeetCode75;
+
 
 
 public class CodePracticeApp {
@@ -16,6 +16,8 @@ public class CodePracticeApp {
 		// App = new MenuScreenApp(screens, 0); App.runScreen();
 
 		System.out.println("Results are: ");
-		System.out.println(Array1.start1(new int[]{1,2,3,4}, new int[]{1}));
+		for(int i : Array1.makeMiddle(new int[]{1,2})) {
+			System.out.println(i);
+		}
 	} 
 }
