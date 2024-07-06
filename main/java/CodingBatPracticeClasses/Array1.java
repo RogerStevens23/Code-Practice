@@ -191,25 +191,7 @@ public class Array1 {
     		case 1:
     			return new int[]{a[0],b[0]};
     	};
-    	
-    	
-    	
-    	
-    	int[] n = new int[2];
-    	if(a.length >= 2) {
-    		n[0] = a[0];
-    		n[1] = a[1];
-    	}
-    	else if(a.length == 1) {
-    		n[0] = a[0];
-    		n[1] = b[0];
-    	}
-    	else {
-    		n[0] = b[0];
-    		n[1] = b[1];
-    	}
-    	
-    	return n;   	
+        return new int[]{};
     }
     
     /* Given 2 int arrays, a and b, of any length, return a new array with the first element of each array. 
