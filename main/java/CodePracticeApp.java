@@ -1,5 +1,5 @@
 import CodingBatPracticeClasses.Array1;
-
+import CodingBatPracticeClasses.Array2;
 
 
 public class CodePracticeApp {
@@ -16,8 +16,6 @@ public class CodePracticeApp {
 		// App = new MenuScreenApp(screens, 0); App.runScreen();
 
 		System.out.println("Results are: ");
-		for(int i : Array1.makeMiddle(new int[]{1,2})) {
-			System.out.println(i);
-		}
+		System.out.println(Array2.bigDiff(new int[]{2,10,7,2}));
 	} 
 }
