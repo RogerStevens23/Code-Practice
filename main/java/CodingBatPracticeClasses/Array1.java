@@ -212,9 +212,3 @@ public class Array1 {
     	return new int[]{};
     }
 }
-
-
-
-
-
-
