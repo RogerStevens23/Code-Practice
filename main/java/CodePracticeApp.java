@@ -16,6 +16,6 @@ public class CodePracticeApp {
 		// App = new MenuScreenApp(screens, 0); App.runScreen();
 
 		System.out.println("Results are: ");
-		System.out.println("Average is: " + Array2.centeredAverage(new int[]{-10, -4, -2, -4, -2, 0}));
+		System.out.println("Sum: " + Array2.sum67(new int[]{2, 7, 6, 2, 6, 7, 2, 7}));
 	} 
 }
