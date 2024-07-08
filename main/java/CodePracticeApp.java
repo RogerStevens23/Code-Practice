@@ -16,6 +16,6 @@ public class CodePracticeApp {
 		// App = new MenuScreenApp(screens, 0); App.runScreen();
 
 		System.out.println("Results are: ");
-		System.out.println("Sum: " + Array2.sum67(new int[]{2, 7, 6, 2, 6, 7, 2, 7}));
+		System.out.println("Only 1 or 4?: " + Array2.only14(new int[]{}));
 	} 
 }

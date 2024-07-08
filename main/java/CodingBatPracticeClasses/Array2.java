@@ -116,6 +116,130 @@ public class Array2 {
         lucky13([1, 2, 4]) → false */
 
     public static boolean lucky13(int[] nums) {
-        return true;
+        boolean result = true;
+        for (int n : nums)
+            if (n == 1 || n == 3) {
+                result = false;
+                break;
+            }
+        return result;
+    }
+
+    /* Given an array of ints, return true if the sum of all the 2's in the array is exactly 8.
+        sum28([2, 3, 2, 2, 4, 2]) → true
+        sum28([2, 3, 2, 2, 4, 2, 2]) → false
+        sum28([1, 2, 3, 4]) → false */
+
+    public static boolean sum28(int[] nums) {
+        int sum = 0;
+        for (int n : nums) {
+            if (n == 2)
+                sum += n;
+        }
+        if (sum == 8)
+            return true;
+        else return false;
+    }
+
+    /* Given an array of ints, return true if the number of 1's is greater than the number of 4's
+        more14([1, 4, 1]) → true
+        more14([1, 4, 1, 4]) → false
+        more14([1, 1]) → true */
+
+    public static boolean more14(int[] nums) {
+        int count1 = 0, count4 = 0;
+        for (int n : nums) {
+            if (n == 1)
+                count1++;
+            if (n == 4)
+                count4++;
+        }
+        return count1 > count4;
+    }
+
+    /* Given a number n, create and return a new int array of length n, containing the numbers 0, 1, 2, ... n-1. The given n may be 0,
+        in which case just return a length 0 array. You do not need a separate if-statement for the length-0 case; the for-loop should naturally
+        execute 0 times in that case, so it just works. The syntax to make a new int array is: new int[desired_length]
+        fizzArray(4) → [0, 1, 2, 3]
+        fizzArray(1) → [0]
+        fizzArray(10) → [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] */
+
+    public static int[] fizzArray(int n) {
+        int[] result = new int[n];
+        for (int i=0; i<n; i++)
+            result[i] = i;
+        return result;
+    }
+
+
+    /* Given an array of ints, return true if every element is a 1 or a 4.
+        only14([1, 4, 1, 4]) → true
+        only14([1, 4, 2, 4]) → false
+        only14([1, 1]) → true */
+
+    public static boolean only14(int[] nums) {
+        boolean result = true;
+        for (int n : nums) {
+            if (n == 1 || n == 4)
+                result = true;
+            else {
+                result = false;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /* Given a number n, create and return a new string array of length n, containing the strings "0", "1" "2" .. through n-1.
+        N may be 0, in which case just return a length 0 array. Note: String.valueOf(xxx) will make the String form of most types.
+        The syntax to make a new string array is: new String[desired_length]
+        fizzArray2(4) → ["0", "1", "2", "3"]
+        fizzArray2(10) → ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+        fizzArray2(2) → ["0", "1"]*/
+
+    public static String[] fizzArray2(int n) {
+        String[] result = new String[n];
+        for (int i=0; i<n; i++) {
+            result[i] = String.valueOf(i);
+        }
+        return result;
+    }
+
+    /* Given an array of ints, return true if it contains no 1's, or it contains no 4's.
+        no14([1, 2, 3]) → true
+        no14([1, 2, 3, 4]) → false
+        no14([2, 3, 4]) → true */
+
+    public static boolean no14(int[] nums) {
+        boolean has1 = false, has4 = false;
+        for (int n: nums) {
+            if (n == 1)
+                has1 = true;
+            if (n == 4)
+                has4 = true;
+        }
+        return !has1 || !has4;
+    }
+
+    /* We'll say that a value is "everywhere" in an array if for every pair of adjacent elements in the array, at least one of the pair is that value.
+    Return true if the given value is everywhere in the array.
+        isEverywhere([1, 2, 1, 3], 1) → true
+        isEverywhere([1, 2, 1, 3], 2) → false
+        isEverywhere([1, 2, 1, 3, 4], 1) → false */
+
+    public static boolean isEverywhere(int[] nums, int val) {
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
