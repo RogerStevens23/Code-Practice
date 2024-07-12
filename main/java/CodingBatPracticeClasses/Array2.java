@@ -1,7 +1,7 @@
 package CodingBatPracticeClasses;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class Array2 {
 
@@ -228,10 +228,45 @@ public class Array2 {
         isEverywhere([1, 2, 1, 3, 4], 1) → false */
 
     public static boolean isEverywhere(int[] nums, int val) {
+        int pairTrue = 0;
+        if (nums.length != 0) { // Returns true with a zero count array. Part of one of the tests but according to the prompt I believe this should return false.
+            for (int i=0; i<nums.length-1; i++)
+                //if(i+1 < nums.length)
+                    if (nums[i] == val && nums[i + 1] != val || nums[i] != val && nums[i + 1] == val || nums[i] == val && nums[i + 1] == val)
+                        pairTrue++;
+            return pairTrue == nums.length-1;
+        }
+        else return true; // above comment explains this ^^^.
+    }
 
+    /* Given an array of ints, return true if the array contains a 2 next to a 2 or a 4 next to a 4, but not both.
+        either24([1, 2, 2]) → true
+        either24([4, 4, 1]) → true
+        either24([4, 4, 1, 2, 2]) → false */
+
+    public static boolean either24(int[] nums) {
+        boolean is2pair = false, is4pair = false;
+        for (int i=0; i<nums.length-1; i++) {
+            if (nums[i] == 2 && nums[i + 1] == 2)
+                is2pair = true;
+            else if (nums[i] == 4 && nums[i + 1] == 4)
+                is4pair = true;
+        }
+        return (is2pair || is4pair) && !(is2pair && is4pair);
+    }
+
+
+
+    /* Given arrays nums1 and nums2 of the same length, for every element in nums1, consider the corresponding element in nums2 (at the same index).
+        Return the count of the number of times that the two elements differ by 2 or less, but are not equal.
+        matchUp([1, 2, 3], [2, 3, 10]) → 2
+        matchUp([1, 2, 3], [2, 3, 5]) → 3
+        matchUp([1, 2, 3], [2, 3, 3]) → 2*/
+
+    public static int matchUp(int[] nums, int[] nums2) {
+        return 0;
     }
 }
-
 
 
 

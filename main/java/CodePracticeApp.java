@@ -16,6 +16,6 @@ public class CodePracticeApp {
 		// App = new MenuScreenApp(screens, 0); App.runScreen();
 
 		System.out.println("Results are: ");
-		System.out.println("Only 1 or 4?: " + Array2.only14(new int[]{}));
+		System.out.println("either 2 or 4?: " + Array2.either24(new int[]{4, 4, 1, 2, 2}));
 	} 
 }
