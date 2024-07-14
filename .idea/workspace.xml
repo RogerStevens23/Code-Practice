@@ -26,7 +26,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -90,7 +90,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720467314176</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Solved a few more practice problems in Array-2. CodePracticeApp updated to reflect testing of said problems.">
+      <option name="closed" value="true" />
+      <created>1720802627109</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720802627109</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,5 +118,15 @@
     <MESSAGE value="Added more practice problems to Array-2." />
     <MESSAGE value="Solved a few more practice problems in Array-2. CodePracticeApp updated to reflect testing of said problems." />
     <option name="LAST_COMMIT_MESSAGE" value="Solved a few more practice problems in Array-2. CodePracticeApp updated to reflect testing of said problems." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

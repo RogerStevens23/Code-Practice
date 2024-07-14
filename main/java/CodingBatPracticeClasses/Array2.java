@@ -1,6 +1,6 @@
 package CodingBatPracticeClasses;
 
-import java.lang.reflect.Array;
+import java.sql.Array;
 import java.util.Arrays;
 
 public class Array2 {
@@ -261,20 +261,50 @@ public class Array2 {
         Return the count of the number of times that the two elements differ by 2 or less, but are not equal.
         matchUp([1, 2, 3], [2, 3, 10]) → 2
         matchUp([1, 2, 3], [2, 3, 5]) → 3
-        matchUp([1, 2, 3], [2, 3, 3]) → 2*/
+        matchUp([1, 2, 3], [2, 3, 3]) → 2 */
 
     public static int matchUp(int[] nums, int[] nums2) {
-        return 0;
+        int count = 0;
+        for (int i=0; i<nums.length; i++) {
+            if(!(nums[i] == nums2[i]) && nums[i]-nums2[i] <=2 && nums2[i]-nums[i] <=2)
+                count++;
+        }
+        return count;
+    }
+
+    /* Given an array of ints, return true if the array contains two 7's next to each other, or there are two 7's separated by one element, such as with {7, 1, 7}.
+        has77([1, 7, 7]) → true
+        has77([1, 7, 1, 7]) → true
+        has77([1, 7, 1, 1, 7]) → false */
+    public static boolean has77(int[] nums) {
+        boolean result = false;
+        for (int i=0; i<nums.length-1; i++) {
+            if ((i + 1 < nums.length) && nums[i] == 7 && nums[i + 1] == 7 || (i + 2 < nums.length) && nums[i] == 7 && nums[i + 2] == 7) {
+                result = true;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /* Given an array of ints, return true if there is a 1 in the array with a 2 somewhere later in the array.
+        has12([1, 3, 2]) → true
+        has12([3, 1, 2]) → true
+        has12([3, 1, 4, 5, 2]) → true */
+
+    public static boolean has12(int[] nums) {
+        boolean has1 = false, has2 = false;
+        int i1 = 0, i2 = 0;
+        for (int i=0; i<nums.length; i++) {
+            if (nums[i] == 1) {
+                has1 = true;
+                i1 = i;
+            }
+            else if (nums[i] == 2) {
+                has2 = true;
+                i2 = i;
+            }
+        }
+        return has1 && has2 && i1 < i2;
     }
 }
-
-
-
-
-
-
-
-
-
-
-

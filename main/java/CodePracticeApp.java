@@ -15,7 +15,9 @@ public class CodePracticeApp {
 		// new Keyword("One")), new QuickScreen(new Keyword("Yoko")), }; MenuScreenApp
 		// App = new MenuScreenApp(screens, 0); App.runScreen();
 
-		System.out.println("Results are: ");
-		System.out.println("either 2 or 4?: " + Array2.either24(new int[]{4, 4, 1, 2, 2}));
+		System.out.println("Results are: "); 	/*  has12([1, 3, 2]) → true
+													has12([3, 1, 2]) → true
+													has12([3, 1, 4, 5, 2]) → true */
+		System.out.println("Has 1 & later 2?: " + Array2.has12(new int[]{1,3,2})); //false
 	} 
 }
