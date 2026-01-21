@@ -1,5 +1,6 @@
 import CodingBatPracticeClasses.Array1;
 import CodingBatPracticeClasses.Array2;
+import CodingBatPracticeClasses.Logic1;
 
 
 public class CodePracticeApp {
@@ -18,6 +19,8 @@ public class CodePracticeApp {
 		System.out.println("Results are: "); 	/*  has12([1, 3, 2]) → true
 													has12([3, 1, 2]) → true
 													has12([3, 1, 4, 5, 2]) → true */
-		System.out.println("Has 1 & later 2?: " + Array2.has12(new int[]{1,3,2})); //false
+		//System.out.println("Has 1 & later 2?: " + Array2.has12(new int[]{1,3,2})); //false
+		//System.out.println(Array2.haveThree(new int[]{3,1,3,1,3}));
+		System.out.println(Logic1.cigarParty(30, false));
 	} 
 }

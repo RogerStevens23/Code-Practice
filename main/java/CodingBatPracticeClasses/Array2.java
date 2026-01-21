@@ -307,4 +307,51 @@ public class Array2 {
         }
         return has1 && has2 && i1 < i2;
     }
+
+    /* Given an array of ints, return true if the array contains either 3 even or 3 odd values all next to each other.
+        modThree([2, 1, 3, 5]) → true
+        modThree([2, 1, 2, 5]) → false
+        modThree([2, 4, 2, 5]) → true */
+    public static boolean modThree(int[] nums) {
+        int even = 0, odd = 0;
+        for (int num : nums) {
+            if (num % 2 == 0) {
+                even++;
+                odd = 0;
+                if (even == 3)
+                    break;
+            } else {
+                odd++;
+                even = 0;
+                if (odd == 3)
+                    break;
+            }
+        }
+        return even == 3 || odd == 3;
+    }
+
+    /* Given an array of ints, return true if the value 3 appears in the array exactly 3 times, and no 3's are next to each other.
+        haveThree([3, 1, 3, 1, 3]) → true
+        haveThree([3, 1, 3, 3]) → false
+        haveThree([3, 4, 3, 3, 4]) → false
+    */
+
+    public static boolean haveThree(int[] nums) {
+        int count = 0;
+        for (int i=0; i < nums.length; i++) {
+            if (nums[i] == 3 && nums[i+1] != 3)
+                count++;
+        }
+
+        return count == 3;
+    }
 }
+
+
+
+
+
+
+
+
+
